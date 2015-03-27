@@ -1,0 +1,5 @@
+/home/garsden/SASIR/CMakeFiles/MRsasir.dir
+/home/garsden/SASIR/CMakeFiles/lofar.dir
+/home/garsden/SASIR/CMakeFiles/lofar_test.dir
+/home/garsden/SASIR/CMakeFiles/sasir.dir
+/home/garsden/SASIR/CMakeFiles/tools.dir

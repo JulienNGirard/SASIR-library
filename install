@@ -1,0 +1,19 @@
+cd build
+mkdir objs 2> /dev/null
+cd objs 
+rm *.o
+ar x ../liblofar.a
+ar x ../libtools.a
+ar x ../libMRsasir.a
+rm libCEA_comp_sens.a
+ar crs libCEA_comp_sens.a lofar_libtest.cc.o  IM_IO.cc.o  IM_FFTPow2.cc.o FFTN.cc.o FFTN_1D.cc.o FFTN_2D.cc.o DefMath.cc.o  Memory.cc.o SB_Filter.cc.o Filter.cc.o SB_Filter1D.cc.o  Arr_Fits.cc.o \
+      IM_Smooth.cc.o OptMedian.cc.o  IM_Rot.cc.o IM_SubImag.cc.o NR_sort.cc.o  NR_indexx.cc.o VMS.cc.o DCT.cc.o  NR_nrutil.cc.o   IM_Poisson.cc.o IM_Fourier.cc.o \
+      SB_Filter_float.cc.o FCur.cc.o FCur_float.cc.o MeyerWT.cc.o IM_MathFunc.cc.o IM_Prob.cc.o writefits3d.cc.o IM_Fits.cc.o IM_IOTools.cc.o
+
+mkdir ../../library
+	
+cp ../../src/liblofar/CEA_comp_sens.h ../../library/.
+cp libCEA_comp_sens.a ../../library/.
+
+cp ../../src/liblofar/CEA_comp_sens.h /usr/include/.
+cp libCEA_comp_sens.a /usr/lib/.

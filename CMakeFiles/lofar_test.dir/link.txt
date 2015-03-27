@@ -1,0 +1,1 @@
+/usr/bin/c++   -DNO_DISP_IO  -g0 -O2 -ffast-math -fomit-frame-pointer -fopenmp -Wno-write-strings -DNDEBUG -fPIC -lcfitsio   CMakeFiles/lofar_test.dir/src/lofar_test.cc.o  -o lofar_test -rdynamic liblofar.a libMRsasir.a libtools.a -lcfitsio -lm 

@@ -1,0 +1,2 @@
+/usr/bin/ar cr liblofar.a  CMakeFiles/lofar.dir/src/liblofar/lofar_libtest.cc.o CMakeFiles/lofar.dir/src/liblofar/lofar_test.cc.o
+/usr/bin/ranlib liblofar.a

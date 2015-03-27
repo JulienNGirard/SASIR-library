@@ -1,0 +1,18 @@
+
+if(NOT CFITSIO_FOUND)
+
+  find_path(CFITSIO_INCLUDE_DIR fitsio.h
+    HINTS ${CFITSIO_ROOT_DIR} PATH_SUFFIXES include)
+  find_library(CFITSIO_LIBRARY cfitsio
+    HINTS ${CFITSIO_ROOT_DIR} PATH_SUFFIXES lib)
+  find_library(M_LIBRARY m)
+  mark_as_advanced(CFITSIO_INCLUDE_DIR CFITSIO_LIBRARY M_LIBRARY)
+
+  include(FindPackageHandleStandardArgs)
+  find_package_handle_standard_args(CFITSIO DEFAULT_MSG
+    CFITSIO_LIBRARY M_LIBRARY CFITSIO_INCLUDE_DIR)
+
+  set(CFITSIO_INCLUDE_DIRS ${CFITSIO_INCLUDE_DIR})
+  set(CFITSIO_LIBRARIES ${CFITSIO_LIBRARY} ${M_LIBRARY})
+
+endif(NOT CFITSIO_FOUND)
